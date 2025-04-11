@@ -155,7 +155,6 @@ def main():
                        "Company_link" : company_link_ls
                        })
     
-    df = pd.read_csv('~/Desktop/raw_topcv_main.csv')
     df.set_index(keys='Job_link', drop=False, inplace=True)
     data = crawl2(df)
     data.to_csv('~/Desktop/topcv.csv', index=False)
